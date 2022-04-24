@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate')%>
+
+    <!-- newformlayout -->
+
+    <div class="row col-6 offset-3">
+        <form class="validationreq" action="/restaurants/<%=restaurant._id %>?_method=PUT " method="POST" novalidate>
+
+            <h1 class="mb-3">Edit Restaurant</h1>
+            <div class="mb-4">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="restaurant[title]"
+                    value="<%= restaurant.title %>" required>
+            </div>
+            <div class="mb-4">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="restaurant[location]"
+                    value="<%= restaurant.location %>" required>
+            </div>
+            <div class="mb-4">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3" name="restaurant[description]"
+                    required><%= restaurant.description %></textarea>
+
+            </div>
+            <div class="mb-4">
+                <label for="image" class="form-label">Image Url</label>
+                <input type="text" class="form-control" id="image" name="restaurant[image]"
+                    value="<%= restaurant.image %>" required>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-success btn-lg">Update Details</button>
+            </div>
+        </form>
+        <a href="/restaurants">Back to restaurants</a>
+    </div>

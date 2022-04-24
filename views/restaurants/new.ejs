@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row col-6 offset-3">
+        <form class="validationreq" action="/restaurants" method="POST" novalidate>
+
+            <h1 class="mb-3">New Restaurant</h1>
+            <div class="mb-4">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="restaurant[title]"
+                    placeholder="Enter restaurant name" required>
+            </div>
+            <div class="mb-4">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="restaurant[location]"
+                    placeholder=" Enter location" required>
+            </div>
+            <div class="mb-4">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3" name="restaurant[description]" placeholder="
+                    Enter description" required></textarea>
+
+            </div>
+            <div class="mb-4">
+                <label for="image" class="form-label">Image Url</label>
+                <input type="text" class="form-control" id="image" name="restaurant[image]"
+                    placeholder=" Enter image url" required>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-success btn-lg">Add Restaurant</button>
+            </div>
+        </form>
+        <a href="/restaurants">Back to restaurants</a>
+    </div>
